@@ -329,6 +329,52 @@ body:not(.cover) .wrap{zoom:1.15}
 @media (min-width:1500px){.cv>*{zoom:1.3}}
 .cv .ayto{font-size:clamp(32px,9vw,48px)}
 .cv h1{font-size:clamp(36px,10vw,84px);zoom:1!important}@media (min-width:900px){.cv h1{font-size:clamp(60px,6.5vw,96px)}}
+
+/* ===== v3: todo mucho más grande (móvil en vertical) ===== */
+/* vista de estudio: cabecera limpia */
+body:not(.cover):not(.home):not(.tmenu) .top .eyebrow,
+body:not(.cover):not(.home):not(.tmenu) .top h1,
+body:not(.cover):not(.home):not(.tmenu) .top .sub,
+body:not(.cover):not(.home):not(.tmenu) .legend{display:none}
+.homebtn{font-size:16px;font-weight:600;color:var(--ink);border-color:var(--ink);min-height:44px;padding:8px 18px;background:var(--surface)}
+.tm{width:44px;height:44px;font-size:16px;font-weight:600;color:var(--ink);border-color:var(--muted)}
+.temario{gap:8px}
+.tema h2,.tema .tt{font-size:24px}
+.tabs{gap:8px;border-bottom:0;margin:14px 0 18px;overflow:visible}
+.tab{flex:1;text-align:center;border:2px solid var(--line);border-radius:12px;margin:0;padding:14px 2px;font-size:16px;font-weight:800;min-width:0;color:var(--ink);background:var(--surface)}
+.tab.on,.tab[aria-selected="true"]{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+.otile{padding:22px 20px}
+.otile .ot{font-size:28px}
+.otile .od{font-size:18px}
+/* lectura: panel más grande */
+
+.abody,.aref{font-size:18px;line-height:1.65}
+.opt{padding:14px 16px}
+@media (max-width:899px){
+  body:not(.cover) .wrap{zoom:1.4;padding-left:10px;padding-right:10px}
+  .cv>*{zoom:1.3}
+  .cv .ayto{font-size:clamp(34px,9.5vw,50px)}
+  .cv h1{font-size:clamp(40px,12vw,60px)}
+  .cv .sub{font-size:19px}
+  .btn.start{font-size:24px;padding:20px 28px}
+  .fts{width:100%}
+  .ft{padding:18px 16px;gap:16px}
+  .ft .fi{width:56px;height:56px;font-size:26px}
+  .ft strong{font-size:22px}
+  .ft span:not(.fi){font-size:17px}
+  .bigstat b{font-size:56px}
+  .bigstat span{font-size:14px}
+  .gt{font-size:22px}.gs{font-size:16px}.gcount{font-size:14px}
+  .tcard .ttl{font-size:21px}.tcard .tmeta{font-size:16px}.tcard .tn{font-size:15px}
+  .tcard .open{font-size:18px}
+  .grp summary{min-height:80px}
+}
+@media (min-width:900px){
+  .fts{flex-direction:column;width:min(100%,560px)}
+  .ft{flex:none}
+}
+@media (min-width:900px){body:not(.cover) .wrap{zoom:1.5}}
+html,body{overflow-x:hidden}.tablewrap{max-width:100%;overflow-x:auto}@media (max-width:899px){table{min-width:400px}}
 </style>
 
 <div class="wrap">
