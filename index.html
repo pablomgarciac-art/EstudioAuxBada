@@ -386,6 +386,76 @@ html,body{overflow-x:hidden}.tablewrap{max-width:100%;overflow-x:auto}@media (ma
   body:not(.tmopen) #temario{display:none}
   .tm{width:42px;height:42px}
 }
+
+/* ===== v4: estética del temario de Pablo (oscuro, dorado, tipografía del sistema) ===== */
+:root:root:root{
+  --bg:#12141a;--surface:#1f2532;--surface2:#262d3d;--ink:#e8eaf0;--muted:#9aa3b8;--line:#2a3142;
+  --primary:#ffd479;--on-primary:#201400;--hl:#ffd479;
+  --ok:#3ecf6f;--ok-bg:#16432a;--bad:#ff6b6b;--bad-bg:#4a1d1d;--on-sem:#10121a;--on-c:#10121a;
+  --c1:#5b8def;--c1b:#1c2740;--c2:#1fb5c2;--c2b:#14323a;--c3:#e0a030;--c3b:#3a2f14;
+  --c4:#9b6bdc;--c4b:#2a2142;--c5:#e0527a;--c5b:#3d1c2b;--c6:#4fbf6a;--c6b:#173626;
+  --f-display:system-ui,-apple-system,'Segoe UI',Roboto,Arial,sans-serif;
+  --f-body:system-ui,-apple-system,'Segoe UI',Roboto,Arial,sans-serif;
+  --f-mono:system-ui,-apple-system,'Segoe UI',Roboto,Arial,sans-serif;
+  color-scheme:dark}
+html{background:#12141a}
+body{background:#12141a;color:#e8eaf0}
+::selection{background:#ffd479;color:#201400}
+mark{background:#ffd479;color:#201400;border-radius:4px;padding:0 3px;font-weight:700}
+.abody b,.aref b,strong{color:#ffd479}
+h1{color:#ffd479}
+body:not(.cover) .wrap{zoom:1!important;max-width:600px;padding-left:12px;padding-right:12px}
+@media (min-width:900px){body:not(.cover) .wrap{max-width:1060px;padding-left:26px;padding-right:26px}}
+/* cabecera fija y pestañas como en el temario */
+body:not(.cover):not(.home):not(.tmenu) .top{position:sticky;top:0;z-index:6;background:linear-gradient(180deg,#12141a 92%,#12141a00);padding:10px 0}
+.homebtn{background:#2a3142;border:0;color:#dfe4ee;font-size:14px;font-weight:700;min-height:40px;padding:8px 16px}
+.tmtoggle{background:#232838;border:0;color:#e8eaf0;font-weight:800}
+.tabs{gap:8px}
+.tab{background:#232838;border:0;border-radius:12px;color:#9aa3b8;font-size:16px!important;font-weight:800;padding:13px 0!important}
+.tab.on,.tab[aria-selected="true"]{background:#ffd479;color:#201400;border:0;box-shadow:0 4px 14px #ffb42833}
+.tm{border-color:#414a61;color:#dfe4ee;background:#232838}
+.tm.on{background:#ffd479;color:#201400;border-color:#ffd479}
+.tema{background:#1f2532;border-color:#2a3142;border-radius:16px}
+.tema h2{color:#ffd479}
+/* tarjetas e índice */
+.grp{border:1px solid #2a3142;border-radius:16px;background:#191e28;border-left-width:1px}
+.grp summary{color:#fff}
+.grp.c1 summary{background:linear-gradient(90deg,var(--c1),color-mix(in srgb,var(--c1) 55%,#191e28))}
+.grp.c2 summary{background:linear-gradient(90deg,var(--c2),color-mix(in srgb,var(--c2) 55%,#191e28))}
+.grp.c3 summary{background:linear-gradient(90deg,var(--c3),color-mix(in srgb,var(--c3) 55%,#191e28))}
+.grp.c4 summary{background:linear-gradient(90deg,var(--c4),color-mix(in srgb,var(--c4) 55%,#191e28))}
+.grp.c5 summary{background:linear-gradient(90deg,var(--c5),color-mix(in srgb,var(--c5) 55%,#191e28))}
+.grp.c6 summary{background:linear-gradient(90deg,var(--c6),color-mix(in srgb,var(--c6) 55%,#191e28))}
+.grp .gt{color:#fff;text-shadow:0 1px 2px rgba(0,0,0,.35)}
+.grp .gs,.grp .gcount{color:rgba(255,255,255,.88)}
+.grp .chev{color:#fff}
+.grp.c1 .tcard{border-left:5px solid var(--c1)}.grp.c2 .tcard{border-left:5px solid var(--c2)}.grp.c3 .tcard{border-left:5px solid var(--c3)}
+.grp.c4 .tcard{border-left:5px solid var(--c4)}.grp.c5 .tcard{border-left:5px solid var(--c5)}.grp.c6 .tcard{border-left:5px solid var(--c6)}
+.tcard{background:#1f2532;border-radius:12px}
+.tcard .ttl{color:#e8eaf0}
+.otile{background:#1f2532;border-color:#2a3142}
+.pills .pill,.tcard .pill{background:#2a3142;color:#dfe4ee}
+@media (min-width:900px){.grp .cards{display:grid;grid-template-columns:1fr 1fr;gap:12px}}
+/* portada */
+body.cover{background:#12141a}
+.cv{background:radial-gradient(1100px 800px at 30% 8%,#2c3b53,#12141a 72%)}
+.cv h1{background:linear-gradient(90deg,#ffd479,#ffb428 55%,#ffd479);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;font-weight:900}
+.cv mark{background:none;color:inherit;-webkit-text-fill-color:transparent;padding:0}
+.cv .ayto{font-family:system-ui,-apple-system,'Segoe UI',Roboto,Arial,sans-serif;font-style:normal;font-weight:800;color:#e8eaf0;letter-spacing:.2px}
+.cv .badge{background:#232838;border:1px solid #3a4254;color:#e8eaf0}
+.cv .sub{color:#9aa3b8}
+.btn.start{background:linear-gradient(90deg,#ffd479,#ffb428);color:#201400;border-radius:999px;font-weight:900;box-shadow:0 10px 30px #ffb42833}
+.btn.cont,.cta .btn:not(.start){background:#232838;color:#e8eaf0;border:1px solid #3a4254;border-radius:999px}
+.bigstat{background:#1f2532;border-color:#2a3142}
+.bigstat b{color:#e8eaf0}.bigstat:first-child b{color:#ffd479}
+.ft{background:#1f2532;border-color:#2a3142}
+.bubbles span{border-color:#414a61;color:#9aa3b8}
+.bubbles span.on,.bubbles span:nth-child(3){background:#ffd479;color:#201400;border-color:#ffd479}
+/* test */
+.opt{background:#262d3d;border:2px solid #31394a;border-radius:12px}
+.opt.ok,.opt.correct{background:#16432a;border-color:#3ecf6f}
+.opt.bad,.opt.wrong{background:#4a1d1d;border-color:#ff6b6b}
+.btn.big,.btn.primary{background:#ffd479;color:#201400;border:0;border-radius:999px;font-weight:800}
 </style>
 
 <div class="wrap">
